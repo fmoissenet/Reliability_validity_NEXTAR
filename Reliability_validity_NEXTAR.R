@@ -70,6 +70,7 @@ p_validity <- ggplot(df, aes(x = Retroversion, y = Inclination, color = Techniqu
   geom_point(alpha = 0.6, size = 3) +
   stat_ellipse(type = "norm", linetype = "dashed", level = 0.95, size = 1) +
   facet_wrap(~ Group) +
+  coord_fixed() +
   theme_minimal() +
   labs(
     title = "Measurement Validity and Reliability",
